@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job List</title>
+    <style>
+       
+        body, h1 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .upset {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: green;
+            background-color: black;
+        }
+
+        .conteiner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: chocolate; /*for test*/
+            border: 3px black solid;
+        }
+
+        .joblist {
+            background-color: cornflowerblue;
+            width: 30%;
+        }
+
+        TD, TH {
+            padding: 3px;
+            border: 1px black solid;
+        }
+
+        table {
+            width: 350px;
+            margin: 0 auto;
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+
+        .addform {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="upset">
+        <h1>Список задач</h1>
+    </nav>
+    
+        <div class="conteiner">
+            <div class="addform">
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name of Task</th>
+                        <th>Status</th>
+                        <th>Change Status</th>
+                    </tr>
+                    @RenderBody();
+                </table>
+            </div>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿
+@using Task_List_Dylan.Models
+@model IEnumerable<User>
+
+@{ 
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<form class="box" method="post" action="~/Home/check">
+    <h4>Для доступа к списку задач пройдите авторизацию</h4>
+    <p>
+        Логин
+        <input class="login" type="text" name="login" required>
+    </p>
+    <p>
+        Пароль
+        <input class="password" type="password" name="password" required>
+    </p>
+    <p>
+        <input class="enter" type="submit" value="Войти" name="submit1">
+    </p>
+</form>
+
+
+
+
+
+
+

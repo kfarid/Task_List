@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        .colored-fon{
+            background-color:darkgray;
+            display:flex;
+            align-items:center;
+            justify-content:center;   
+        }
+        .box {
+            width: 230px;
+            height: 200px;
+            margin: 200px auto;
+        }
+
+        .registration,
+        .login,
+        .password,
+        .enter {
+            float: right;
+        }
+
+        .registration {
+            margin-right: 25px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="colored-fon">
+
+        @RenderBody(); 
+       
+    </div>
+</body>
+</html>
+

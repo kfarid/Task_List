@@ -1,0 +1,30 @@
+﻿@using Task_List_Dylan.Models;
+@model IEnumerable<Job>;
+@{
+    Layout = "~/Views/_Layout_Job.cshtml";
+}
+
+@{
+    foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.GetStringOfStatus()</td>
+            <td>
+                <form method="post" action="~/job/ChangeStatus">
+                    <input type="hidden" value="@item.Id" name="ItemId" />
+                    <input type="submit" value="Change" class="btn">
+                </form>
+           
+            </td>
+        </tr>
+    }
+    <div class="addform">
+        <form method="post" action="~/job/add">
+            <input type="text" name="title" required />
+            <input type="submit" value="Add" />
+        </form>
+    </div>
+}
+
